@@ -1,7 +1,7 @@
 import json
 
 def colorMap(area):
-    fill, stroke = None, '#000000'
+    fill, stroke = '#111111', '#FFFFFF'
     if area == "以绪塔尔":
         fill, stroke = '#FF00FF', '#FFFF00'  # Red # Yellow
     elif area == "巨神峰":
@@ -28,7 +28,7 @@ def colorMap(area):
         fill, stroke = '#FF7F50', '#FF0000'
     elif area == "诺克萨斯":
         fill, stroke = '#ADD8E6', '#006400'
-    return {'fill': fill, 'stroke':'#000000'}
+    return {'fill': fill, 'stroke':'#FFFFFF'}
 
 # Open the JSON file
 with open('hero_meta.json', 'r') as f:
@@ -39,14 +39,16 @@ res = {'nodes':[], 'edges':[]}
 for hero in data:
     res['nodes'].append({
     'id':hero['zh_name'],
-     'label':hero['zh_name'],
-      'details':hero,
-      'style': colorMap(hero['相关地区']),
-      'labelCfg': {
+    'label':hero['zh_name'],
+    'details':hero,
+    'style': colorMap(hero['相关地区']),
+    'labelCfg': {
           'style': {
-            'fontSize': 8
+            'fontSize': 8,
+            'fill': 'white',
           }
-        }
+    },
+
       })
 for hero in data:
     for rela in hero['relative_heros']:

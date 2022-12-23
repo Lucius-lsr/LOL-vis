@@ -12,7 +12,11 @@ const graph = new G6.Graph({
         preventOverlap: true,
     },
     defaultNode: {
-        size: 20,
+        type: 'image',
+        style: {
+            image: 'https://gw.alipayobjects.com/mdn/rms_f8c6a0/afts/img/A*eD7nT6tmYgAAAAAAAAAAAABkARQnAQ',
+        },
+        size: 30,
     },
     modes: {
         default: ['drag-canvas', 'zoom-canvas', 'drag-node', // 允许拖拽画布、放缩画布、拖拽节点
