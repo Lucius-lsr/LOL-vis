@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@antv/g6": "latest"
+    "@antv/g6": "latest",
+    "element-ui": "^2.15.12",
+    "g6-plugin-lazyload-images": "^0.1.5",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
