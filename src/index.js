@@ -55,7 +55,12 @@ fetch('relations.json')
             e.item.get('model').fx = null;
             e.item.get('model').fy = null;
         });
-
+        graph.on('node:dblclick', function(e) {
+            const zh_name = e.item.get('model').id;
+            const el = document.getElementById('wordcloud')
+            el.style.display = 'block'
+            el.setAttribute('src', 'imgs/'+zh_name+'.png')
+        })
         if (typeof window !== 'undefined')
             window.onresize = () => {
                 if (!graph || graph.get('destroyed')) return;
@@ -69,3 +74,8 @@ function refreshDragedNodePosition(e) {
     model.fx = e.x;
     model.fy = e.y;
 }
+
+document.getElementById('container').addEventListener('click', function(e) {
+    let el = document.getElementById('wordcloud');
+    el.style.display = 'none'
+}, true)
