@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Tutorial Demo</title>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <style>
         /* 提示框的样式 */
         .g6-tooltip {
@@ -17,8 +17,47 @@
         }
     </style>
 </head>
-<body style="background: url('bg.jpg'); background-size: cover;">
-<div id="container" />
+<body style="background: url('xukong.png'); background-size: cover;">
+<div>
+    <label style="color: #e2e2e2">展示方式</label>
+    <select id="classification">
+        <option value="default">默认</option>
+        <option value="region">地区</option>
+        <option value="job">位置</option>
+    </select>
+</div>
+<div>
+    <label style="color: #e2e2e2">筛选地区</label>
+    <select id="region_filter">
+        <option value="all">全部</option>
+        <option value="以绪塔尔">以绪塔尔</option>
+        <option value="巨神峰">巨神峰</option>
+        <option value="弗雷尔卓德">弗雷尔卓德</option>
+        <option value="德玛西亚">德玛西亚</option>
+        <option value="恕瑞玛">恕瑞玛</option>
+        <option value="暗影岛">暗影岛</option>
+        <option value="比尔吉沃特">比尔吉沃特</option>
+        <option value="班德尔城">班德尔城</option>
+        <option value="皮尔特沃夫">皮尔特沃夫</option>
+        <option value="祖安">祖安</option>
+        <option value="艾欧尼亚">艾欧尼亚</option>
+        <option value="虚空之地">虚空之地</option>
+        <option value="诺克萨斯">诺克萨斯</option>
+    </select>
+</div>
+<div>
+    <label style="color: #e2e2e2">筛选位置</label>
+    <select id="job_filter">
+        <option value="all">全部</option>
+        <option value="战士">战士</option>
+        <option value="射手">射手</option>
+        <option value="法师">法师</option>
+        <option value="坦克">坦克</option>
+        <option value="刺客">刺客</option>
+        <option value="辅助">辅助</option>
+    </select>
+</div>
+<div id="container"></div>
 
 </body>
 </html>
